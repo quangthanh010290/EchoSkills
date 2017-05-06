@@ -1,0 +1,7 @@
+YesIntent yes
+YesIntent sure
+YesIntent ok
+NoIntent No
+NoIntent not sure
+AnswerIntent {first} {second} {third}
+AnswerIntent {first} {second} and {third}
