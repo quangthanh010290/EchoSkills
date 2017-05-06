@@ -36,6 +36,13 @@ def next_round():
     return question(round_msg)
 
 
+@ask.intent("NoIntent")
+
+def dong():
+	dong_msg = render_template('Dong')
+	return statement(dong_msg)
+	
+
 @ask.intent("AnswerIntent", convert={'first': int, 'second': int, 'third': int})
 
 def answer(first, second, third):

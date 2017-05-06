@@ -1,5 +1,7 @@
 welcome: Welcome to memory game. I'm going to say three numbers for you to repeat backwards. Ready?
 
+Dong: Today we will tell about an effork to solve the mystery of Emmelia Ehert - the first woman flight on the world.
+
 round: Can you repeat the numbers {{ numbers|join(", ") }} backwards?
 
 win: Good job!
