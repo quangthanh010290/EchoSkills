@@ -23,4 +23,7 @@ https://github.com/johnwheeler/flask-ask
 # Elexa Development Page
 https://developer.amazon.com/home.html
 
+#Getting Started With Alexa Development skill kit
+https://developer.amazon.com/public/solutions/alexa/alexa-skills-kit/getting-started-guide
+
 
