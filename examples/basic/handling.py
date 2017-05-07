@@ -30,7 +30,10 @@ def intent_fcn():
 def stop():
     return statement("Stoped")
 
-
+@ask.session_ended
+def session_ended():
+    log.debug("Session ended")
+    return "",200
 if __name__ == '__main__':
 
     app.run(debug=True)
