@@ -18,7 +18,7 @@ logging.getLogger("flask_ask").setLevel(logging.DEBUG)
 
 def launch():
 
-    return statement("Welcome to the request demo")
+    return statement("Welcome to the request demo, this is launch request")
 
 if __name__ == '__main__':
 
