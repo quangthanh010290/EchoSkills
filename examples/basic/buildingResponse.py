@@ -16,7 +16,7 @@ logging.getLogger("flask_ask").setLevel(logging.DEBUG)
 
 @ask.launch
 def fcn():
-    return question("What is your name?")
+    return question("What is your name?").reprompt("May I have your name?")
 
 
 @ask.intent("MyNameIsIntent")
