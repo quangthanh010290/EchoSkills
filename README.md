@@ -20,6 +20,7 @@ https://developer.amazon.com/blogs/post/Tx14R0IYYGH3SKT/Flask-Ask-A-New-Python-F
 https://ngrok.com/download
 # Git
 https://github.com/johnwheeler/flask-ask
-
+# Elexa Development Page
+https://developer.amazon.com/home.html
 
 
