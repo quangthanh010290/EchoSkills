@@ -19,7 +19,7 @@ logging.getLogger("flask_ask").setLevel(logging.DEBUG)
 
 def name_fcn(firstname):
     msg = "Your name is {}".format(firstname)
-    return statement(msg)
+    return statement(msg).simple_card("Hello {}".format(firstname),msg)
 if __name__ == '__main__':
 
     app.run(debug=True)
