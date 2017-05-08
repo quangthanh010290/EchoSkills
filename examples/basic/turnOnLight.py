@@ -23,7 +23,7 @@ def launch():
 @ask.intent("AnswerIntent")
 
 def intent_fcn(roomName):
-    msg = "Please Confirm that you wan to turn on the {} light on".format(roomName)
+    msg = "Please Confirm that you wana turn on the {} light on".format(roomName)
     return question(msg)
 
 @ask.intent("AMAZON.YesIntent")
