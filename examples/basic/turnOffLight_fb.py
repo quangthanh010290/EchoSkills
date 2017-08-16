@@ -16,7 +16,7 @@ app = Flask(__name__)
 
 ask = Ask(app, "/")
 
-logging.getLogger("flask_ask").setLevel(logging.DEBUG)
+#logging.getLogger("flask_ask").setLevel(logging.DEBUG)
 
 
 @ask.launch
@@ -29,12 +29,21 @@ def launch():
 
 def intent_fcn(roomName):
     msg = "Ligh on {} is turned off".format(roomName)
-    firebase.put('/123','states/001',False)
+    if roomName == "kichen":
+	print 'Light on kichen room is turned off'
+    	firebase.put('/rooms','kichen_room',False)
+    if roomName == "living":
+	print 'Light on living room is turn off'
+	firebase.put('/rooms','living_room',False)
+    if roomName == 'bath':
+	print 'Light on bath room is turn off'
+	firebase.put('/rooms','bath_room',False)
     return statement(msg)
 
 @ask.intent("AMAZON.YesIntent")
 def yes_fcn(roomName):
     msg = "Ligh on {} is turned off".format(roomName)
+    print roomName
     firebase.put('/123','states/001',False)
     return statement(msg)
 
@@ -44,4 +53,4 @@ def stop():
 
 if __name__ == '__main__':
 
-    app.run(debug=True,host = '0.0.0.0', port=7000)
+    app.run(debug=False,host = '0.0.0.0', port=7000)
