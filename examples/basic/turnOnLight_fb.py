@@ -28,10 +28,17 @@ def launch():
 @ask.intent("AnswerIntent")
 
 def intent_fcn(roomName):
-    msg = "Ligh on {} is turned on".format(roomName)
-    firebase.put('/123','states/001',True)
+    msg = "Ligh on {} is turned off".format(roomName)
+    if roomName == "kichen":
+        print 'Light on kichen room is turned off'
+        firebase.put('/rooms','kichen_room',True)
+    if roomName == "living":
+        print 'Light on living room is turn off'
+        firebase.put('/rooms','living_room',True)
+    if roomName == 'bath':
+        print 'Light on bath room is turn off'
+        firebase.put('/rooms','bath_room',True)
     return statement(msg)
-
 @ask.intent("AMAZON.YesIntent")
 def yes_fcn(roomName):
     msg = "Ligh on {} is turned on".format(roomName)
