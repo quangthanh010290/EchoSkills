@@ -16,7 +16,7 @@ app = Flask(__name__)
 
 ask = Ask(app, "/")
 
-logging.getLogger("flask_ask").setLevel(logging.DEBUG)
+#logging.getLogger("flask_ask").setLevel(logging.DEBUG)
 
 
 @ask.launch
@@ -30,13 +30,13 @@ def launch():
 def intent_fcn(roomName):
     msg = "Ligh on {} is turned off".format(roomName)
     if roomName == "kichen":
-        print 'Light on kichen room is turned off'
+        print 'Light on kichen room is turned on'
         firebase.put('/rooms','kichen_room',True)
     if roomName == "living":
-        print 'Light on living room is turn off'
+        print 'Light on living room is turn on'
         firebase.put('/rooms','living_room',True)
     if roomName == 'bath':
-        print 'Light on bath room is turn off'
+        print 'Light on bath room is turn on'
         firebase.put('/rooms','bath_room',True)
     return statement(msg)
 @ask.intent("AMAZON.YesIntent")
