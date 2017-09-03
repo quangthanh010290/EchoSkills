@@ -32,7 +32,7 @@ def intent_fcn(roomName):
     if roomName == "kichen":
 	print 'Light on kichen room is turned off'
     	firebase.put('/devices/8795002','status',False)
-    if roomName == "living":
+    if roomName == "living room":
 	print 'Light on living room is turn off'
 	firebase.put('/devices/390650','status',False)
     if roomName == 'bath':
