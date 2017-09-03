@@ -28,7 +28,7 @@ def launch():
 @ask.intent("AnswerIntent")
 
 def intent_fcn(roomName):
-    msg = "Ligh on {} is turned off".format(roomName)
+    msg = "Ligh on {} is turned on".format(roomName)
     if roomName == "kichen":
         print 'Light on kichen room is turned on'
         firebase.put('/devices/8795002','status',True)
