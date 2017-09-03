@@ -31,10 +31,10 @@ def intent_fcn(roomName):
     msg = "Ligh on {} is turned off".format(roomName)
     if roomName == "kichen":
         print 'Light on kichen room is turned on'
-        firebase.put('/rooms','kichen_room',True)
+        firebase.put('/devices/8795002','status',True)
     if roomName == "living":
         print 'Light on living room is turn on'
-        firebase.put('/rooms','living_room',True)
+        firebase.put('/devices/390650','status',True)
     if roomName == 'bath':
         print 'Light on bath room is turn on'
         firebase.put('/rooms','bath_room',True)
