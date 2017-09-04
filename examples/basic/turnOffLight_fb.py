@@ -37,7 +37,7 @@ def intent_fcn(roomName):
 	firebase.put('/devices/390650','status',False)
     if roomName == 'bathroom':
 	print 'Light on bath room is turn off'
-	firebase.put('/rooms','bath_room',False)
+	firebase.put('/devices/390192','status',False)
     return statement(msg)
 
 @ask.intent("AMAZON.YesIntent")
