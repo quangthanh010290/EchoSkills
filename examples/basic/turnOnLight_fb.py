@@ -23,20 +23,20 @@ ask = Ask(app, "/")
 
 def launch():
 
-    return question("Which room you want to turn on?")
+    return question("Sorry, which room?")
 
 @ask.intent("AnswerIntent")
 
 def intent_fcn(roomName):
     print('roomName'+roomName)
     msg = "Ligh on {} is turned on".format(roomName)
-    if roomName == "kichen":
+    if roomName == "kitchen":
         print 'Light on kichen room is turned on'
         firebase.put('/devices/8795002','status',True)
     if roomName == "living room":
         print 'Light on living room is turn on'
         firebase.put('/devices/390650','status',True)
-    if roomName == 'bath':
+    if roomName == 'bathroom':
         print 'Light on bath room is turn on'
         firebase.put('/rooms','bath_room',True)
     return statement(msg)

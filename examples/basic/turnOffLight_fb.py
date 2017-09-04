@@ -25,17 +25,17 @@ def launch():
 
     return question("Which room you want to turn off?")
 
-@ask.intent("AnswerIntent")
+@ask.intent("RoomIntent")
 
 def intent_fcn(roomName):
     msg = "Ligh on {} is turned off".format(roomName)
-    if roomName == "kichen":
+    if roomName == "kitchen":
 	print 'Light on kichen room is turned off'
     	firebase.put('/devices/8795002','status',False)
     if roomName == "living room":
 	print 'Light on living room is turn off'
 	firebase.put('/devices/390650','status',False)
-    if roomName == 'bath':
+    if roomName == 'bathroom':
 	print 'Light on bath room is turn off'
 	firebase.put('/rooms','bath_room',False)
     return statement(msg)
