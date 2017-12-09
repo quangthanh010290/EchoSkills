@@ -7,4 +7,6 @@ sudo apt-get install libffi-dev -y
 sudo apt-get install python-pip -y
 sudo apt-get install python-dev -y
 sudo pip install flash-ask
+pip install --upgrade pip enum34
+sudo pip install paramiko
 sudo pip install python-firebase
