@@ -28,4 +28,10 @@ https://developer.amazon.com/home.html
 #Getting Started With Alexa Development skill kit
 https://developer.amazon.com/public/solutions/alexa/alexa-skills-kit/getting-started-guide
 
+# Run the App
 
+1. Run ngrok on specific port 
+
+2. Edit the code to ensure they have same port 
+
+`app.run(debug=True,host = '0.0.0.0', port=6000)`
