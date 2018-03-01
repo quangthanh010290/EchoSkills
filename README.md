@@ -17,6 +17,8 @@ https://developer.amazon.com/blogs/post/Tx14R0IYYGH3SKT/Flask-Ask-A-New-Python-F
 
 # Ngrok Tool
 https://ngrok.com/download
+To start a HTTP tunnel on port 80
+`./ngrok http 80`
 # Git
 https://github.com/johnwheeler/flask-ask
 # Elexa Development Page
